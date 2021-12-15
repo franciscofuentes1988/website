@@ -1,0 +1,322 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+/* cabecera */
+header {
+    background-image: linear-gradient(to right, rgb(10, 50, 83), rgb(33, 85, 107));
+    width: 100%;
+}
+.menu {
+    display: inline;
+    font-family: 'Quicksand', sans-serif;
+    text-align: right;
+}
+#btn-menu {
+    display: none;
+}
+header label {
+    display: none;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-right: 1px solid rgb(105, 114, 121);
+}
+header label:hover {
+    cursor: pointer;
+    background: rgba(0,0,0,0.3);
+}
+a {
+    text-decoration: none;
+    color:rgb(255, 255, 255); 
+}
+.menu-botones {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.menu-botones li {
+    padding:0.5rem 1rem;
+    margin-top: 20px;
+    position:relative;
+    padding-bottom: 30px;
+}
+.menu-botones li:hover {
+    background: rgba(0,0,0,0.3);
+}
+.menu-botones li a {
+    display:block;
+}
+/* footer */
+footer {
+    background-color:rgb(10, 50, 83);
+    padding-left: 200px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-image: linear-gradient(to right, rgb(10, 50, 83), rgb(33, 85, 107));
+}
+.botones-footer {
+    list-style: none;
+    display: inline;
+    font-family: 'Quicksand', sans-serif;
+
+}   
+.botones-footer a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+/* contenido principal */
+main {
+    background-image: linear-gradient(to right, rgb(10, 50, 83), rgb(33, 85, 107));
+    display: inline-block;
+}
+.contenido-principal {
+    display: inline-block;
+}
+.contenido-principal p {
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(246, 248, 253);
+    text-align: right;
+    padding-right: 200px;
+    padding-left: 200px;
+    padding-top: 0px;
+    margin: 0px;
+    font-size: 35px;
+}
+.contenido-principal h1 {
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(149, 164, 206);
+    text-align: right;
+    padding-right: 200px;
+    padding-left: 200px;
+    padding-top: 100px;
+    margin-bottom:0px;
+    margin: 0px;
+    font-size: 90px;    
+}
+#boton-contacto {
+    display:block;
+    margin:auto;
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+/* contenido grid Sección Proyectos*/
+.grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "proyecto masproyectos masproyectos"
+    "proyecto masproyectos masproyectos";
+    justify-items: stretch;
+    justify-content: stretch;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(255, 255, 255);
+}
+.proyectoreciente {
+    grid-area: proyecto;
+    background-color: rgb(29, 67, 99);
+    padding: 20px;
+}
+.proyectosgenerales {
+    grid-area: masproyectos;
+    background-color: rgb(51, 102, 145);
+    padding: 20px;
+}
+.grid p {
+    padding: 10px;
+}
+.grid h2 {
+    padding: 10px;
+}
+.grid h3 {
+    padding: 10px;
+}
+.grid img {
+    padding: 10px;
+    border-radius: 20px;
+}
+@media (max-width:768px) {
+    header {
+        background: linear-gradient(to right, rgb(18, 24, 29), rgb(33, 85, 107));
+    }
+    header label {
+        display: block;
+    }
+    .menu {
+        position: absolute;
+        width: 70%;
+        background: linear-gradient(to right, rgb(10, 50, 83), rgb(33, 85, 107));
+        margin-left: -70%;
+        transition: all 0.5s;
+    }
+    .menu-botones {
+        flex-direction:column;
+    }
+    .menu-botones li {
+        border-top: 1px solid rgb(105, 114, 121);
+        padding: 1rem;
+        margin: 0;
+    }
+    #btn-menu:checked ~ .menu {
+        margin: 0;
+    }
+    .contenido-principal h1 {
+        font-size: 50px;
+        padding-top: 5%;
+        padding-left: 20px;
+        padding-right: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+    .contenido-principal p {
+        font-size: 20px;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .container {
+        display: block;
+    }
+    #boton-contacto {
+        text-align: center;
+        width: 200px;
+        height: 60px;
+    }
+    .faq {
+        display: block;  
+    }
+    .faq h2{
+        font-size: 40px;
+        padding-top: 5%;
+        justify-content: center;
+        text-align: center;
+    }
+    .faq p {
+        font-size: 18px;
+        text-align: center;
+    }
+    .noticias-seo h2 {
+        font-size: 40px;        
+    }
+    .noticias-seo img {
+        border: 1.8px solid rgb(85, 130, 172);
+    }
+    .noticias-seo h3 {
+        font-size: 25px;
+    }
+    .articulo-seo {
+        padding: 0px;
+        margin: 0px;
+    }
+    footer li {
+        text-align: center;
+    }
+    .somos {
+        height:580px;
+        width:600px;
+        border-radius: 0;
+        margin-left: 0;
+    }
+    .somos p {
+        font-size: 15px;
+    }
+    .somos h2 {
+        font-size: 20px;
+    }
+    .somos strong {
+        font-size:1rem;
+}
+.container2 {
+background-color:rgb(255, 255, 255);
+}
+.quienesomos {
+    padding-bottom: 50px;
+}
+.container {
+    width: 100px;
+    background-color:rgb(255, 255, 255);
+    display: block;
+    text-align: center;
+    justify-content: center;
+}
+.item-0 {
+    height:400px;
+    width:350px;
+    padding: 10px;
+}
+.item-1 {
+    height:400px;
+    width:350px;
+    padding: 10px;
+    margin-left: 0;        
+}
+.container img {
+    width: 210px;
+    height: 150px;
+}
+.container p {
+    font-size: 15px;
+}
+.quees-home {
+    padding-bottom: 50px;
+}
+.servicios-section {
+    width: 350px;
+}
+.grid {
+    display:block;
+}
+}
+
+/* contenido grid Sección Metodologia*/
+.grid2 {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "investigacion auditoria propuesta desarrollo reporteria"
+    "investigacion auditoria propuesta desarrollo reporteria"
+    "investigacion auditoria propuesta desarrollo reporteria"
+    "investigacion auditoria propuesta desarrollo reporteria"
+    "investigacion auditoria propuesta desarrollo reporteria";
+    justify-items: stretch;
+    justify-content: stretch;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(255, 255, 255);
+}
+.investigacion {
+    grid-area: investigacion;
+    background-color: rgb(29, 67, 99);
+    padding: 20px;
+}
+.auditoria {
+    grid-area: auditoria;
+    background-color: rgb(29, 67, 99);
+    padding: 20px;
+}
+.propuesta {
+    grid-area: propuesta;
+    background-color: rgb(29, 67, 99);
+    padding: 20px;
+}
+.desarrollo {
+    grid-area: desarrollo;
+    background-color: rgb(29, 67, 99);
+    padding: 20px;
+}
+.reporteria {
+    grid-area: reporteria;
+    background-color: rgb(29, 67, 99);
+    padding: 20px;
+}
+.grid2 p {
+    padding: 10px;
+}
+.grid2 h2 {
+    padding: 10px;
+}
+.grid2 h3 {
+    padding: 10px;
+}
+}
